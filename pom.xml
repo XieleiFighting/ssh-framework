@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.hades</groupId>
+	<artifactId>ssh-framework</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>ssh-framework</name>
+	<url>https://github.com/XieleiFighting/ssh-framework</url>
+	<organization>
+		<name>ssh-framework</name>
+		<url>https://github.com/XieleiFighting</url>
+	</organization>
+	
+	<modules>
+		<module>ssh-parent</module>
+	</modules>
+	
+	<build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.0</version>
+                <configuration>
+                    <locales>zh_CN</locales>
+                    <outputEncoding>UTF-8</outputEncoding>
+                    <inputEncoding>UTF-8</inputEncoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <!-- 开发人员信息 -->
+    <developers>
+        <developer>
+            <name>xielei</name>
+            <email>xielei@gmail.com</email>
+            <url>https://github.com/ShitouFighting</url>
+            <roles>
+                <role>software engineer</role>
+            </roles>
+            <timezone>8</timezone>
+        </developer>
+    </developers>
+    
+</project>
