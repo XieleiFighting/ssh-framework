@@ -101,10 +101,10 @@
         </property>
     </bean>
     
-    <!-- factory-class="" --><!-- 可以改为自定义的实现 -->
     <jpa:repositories
 		base-package="com.hades.ssh.**.dao"
 		repository-impl-postfix="Impl"
+		factory-class="com.hades.ssh.common.dao.support.SimpleBaseRepositoryFactoryBean"
 		entity-manager-factory-ref="entityManagerFactory"
 		transaction-manager-ref="transactionManager">
     
@@ -160,5 +160,23 @@
     
     <!-- 类型转换及数据格式化 -->
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean"/>
+    
+    <!-- 直接把id转换为entity 必须非lazy否则无法注册-->
+    <bean id="domainClassConverter" class="org.springframework.data.repository.support.DomainClassConverter">
+        <constructor-arg ref="conversionService"/>
+    </bean>
+    
+    <!--设置查询字符串转换器的conversion service-->
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="staticMethod"
+                  value="com.hades.ssh.common.utils.SearchableConvertUtils.setConversionService"/>
+        <property name="arguments" ref="conversionService"/>
+    </bean>
+    
+    <!--设置RepositoryHelper辅助类所需的entityManagerFactory-->
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+    	<property name="staticMethod" value="com.hades.ssh.common.dao.RepositoryHelper.setEntityManagerFactory" />
+    	<property name="arguments" ref="entityManagerFactory"/>
+    </bean>
     
 </beans>

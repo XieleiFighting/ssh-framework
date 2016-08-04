@@ -9,7 +9,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 
-import net.sf.ehcache.config.Searchable;
+import com.hades.ssh.common.entity.search.Searchable;
 
 /**
  * <p>抽象DAO层基类 提供一些简便方法<br/>
