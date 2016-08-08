@@ -5,8 +5,11 @@
  */
 package org.apache.shiro.web.filter.online;
 
-import com.sishuok.es.common.Constants;
-import com.sishuok.es.sys.user.entity.User;
+import java.io.IOException;
+
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+
 import org.apache.shiro.ShiroConstants;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.OnlineSession;
@@ -15,9 +18,8 @@ import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.AccessControlFilter;
 import org.apache.shiro.web.util.WebUtils;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import java.io.IOException;
+import com.hades.ssh.common.Constants;
+import com.hades.ssh.entity.sys.User;
 
 /**
  * <p>User: Zhang Kaitao

@@ -1,4 +1,4 @@
-<%@ page import="com.sishuok.es.common.utils.LogUtils" %>
+<%@ page import="com.hades.ssh.common.utils.LogUtils" %>
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="java.io.StringWriter" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>

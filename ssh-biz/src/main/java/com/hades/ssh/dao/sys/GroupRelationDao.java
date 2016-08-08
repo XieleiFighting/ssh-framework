@@ -15,8 +15,8 @@ import com.hades.ssh.common.dao.BaseDao;
 import com.hades.ssh.entity.sys.GroupRelation;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 13-2-4 下午3:00
+ * <p>User: XieLei
+ * <p>Date: 2016年8月8日 上午10:58:40
  * <p>Version: 1.0
  */
 public interface GroupRelationDao extends BaseDao<GroupRelation, Long> {
@@ -32,7 +32,7 @@ public interface GroupRelationDao extends BaseDao<GroupRelation, Long> {
      * @return
      */
     GroupRelation findByGroupIdAndStartUserIdLessThanEqualAndEndUserIdGreaterThanEqual(Long groupId, Long startUserId, Long endUserId);
-
+    
     /**
      * 删除区间内的数据 因为之前已经有一个区间包含它们了
      *

@@ -5,16 +5,17 @@
  */
 package org.apache.shiro.session.mgt.eis;
 
-import com.sishuok.es.sys.user.entity.UserOnline;
-import com.sishuok.es.sys.user.service.UserOnlineService;
+import java.io.Serializable;
+import java.util.Date;
+
 import org.apache.shiro.ShiroConstants;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.OnlineSession;
 import org.apache.shiro.session.mgt.OnlineSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.io.Serializable;
-import java.util.Date;
+import com.hades.ssh.entity.sys.UserOnline;
+import com.hades.ssh.service.sys.UserOnlineService;
 
 /**
  * 对于db的操作 考虑使用 异步+队列机制

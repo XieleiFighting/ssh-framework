@@ -142,8 +142,8 @@
         <property name="basenames">
             <list>
                 <!-- 在web环境中一定要定位到classpath 否则默认到当前web应用下找  -->
-                <value>classpath:messages</value>
-                <value>classpath:ValidationMessages</value>
+                <value>classpath:messages/messages</value>
+                <value>classpath:messages/ValidationMessages</value>
             </list>
         </property>
         <property name="useCodeAsDefaultMessage" value="false"/>
@@ -178,5 +178,8 @@
     	<property name="staticMethod" value="com.hades.ssh.common.dao.RepositoryHelper.setEntityManagerFactory" />
     	<property name="arguments" ref="entityManagerFactory"/>
     </bean>
+    
+    <import resource="spring-config-cache.xml"/>
+    <import resource="spring-config-shiro.xml"/>
     
 </beans>

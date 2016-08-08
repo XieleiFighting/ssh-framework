@@ -68,7 +68,7 @@
         </div>
     </div>
     <%@include file="listTable.jsp"%>
-
+	
 </div>
 <es:contentFooter/>
 <%@include file="/WEB-INF/jsp/common/admin/import-personal-js.jspf"%>

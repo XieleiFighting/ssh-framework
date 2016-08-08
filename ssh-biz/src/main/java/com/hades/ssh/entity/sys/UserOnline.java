@@ -104,7 +104,7 @@ public class UserOnline extends AbstractEntity<String> {
      * 备份的当前用户会话
      */
     @Column(name = "session")
-    @Type(type = "com.sishuok.es.common.repository.hibernate.type.ObjectSerializeUserType")
+    @Type(type = "com.hades.ssh.common.dao.hibernate.type.ObjectSerializeUserType")
     private OnlineSession session;
 
 

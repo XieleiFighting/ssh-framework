@@ -1,9 +1,4 @@
-/**
- * Copyright (c) 2005-2012 https://github.com/zhangkaitao
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- */
-package com.hades.ssh.entity.sys.tmp;
+package com.hades.ssh.entity.tmp;
 
 import com.google.common.collect.Lists;
 
@@ -12,13 +7,13 @@ import java.util.List;
 
 /**
  * 界面是那个使用的菜单对象
- * <p>User: Zhang Kaitao
- * <p>Date: 13-4-9 下午4:20
+ * <p>User: XieLei
+ * <p>Date: 2016年8月8日 上午10:19:01
  * <p>Version: 1.0
  */
 public class Menu implements Serializable {
 
-	private static final long serialVersionUID = -3723931114888106175L;
+	private static final long serialVersionUID = -1692238372964326242L;
 	private Long id;
     private String name;
     private String icon;

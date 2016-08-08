@@ -11,7 +11,12 @@ import org.springframework.data.jpa.repository.Query;
 import com.hades.ssh.common.dao.BaseDao;
 import com.hades.ssh.entity.sys.UserOnline;
 
-public interface UserOnlineDao extends BaseDao<UserOnline, Long> {
+/**
+ * <p>User: XieLei
+ * <p>Date: 2016年8月8日 下午2:38:40
+ * <p>Version: 1.0
+ */
+public interface UserOnlineDao extends BaseDao<UserOnline, String> {
 
 	@Query("from UserOnline o where o.lastAccessTime < ?1 order by o.lastAccessTime asc")
     Page<UserOnline> findExpiredUserOnlineList(Date expiredDate, Pageable pageable);

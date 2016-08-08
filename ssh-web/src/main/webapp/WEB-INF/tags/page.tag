@@ -40,7 +40,7 @@
 <div class="pagination">
     <ul>
         <c:choose>
-            <c:when test="${page.firstPage}">
+            <c:when test="${page.number==0}">
                 <li class="disabled"><a title="首页">首页</a></li>
                 <li class="disabled"><a title="上一页">&lt;&lt;</a></li>
             </c:when>
@@ -76,9 +76,8 @@
                 <a href="#" onclick="$.table.turnPage('${pageSize}', ${i}, this);" title="第${i}页">${i}</a>
             </li>
         </c:forEach>
-
         <c:choose>
-            <c:when test="${page.lastPage}">
+           <c:when test="${!page.hasNext()}">
                 <li class="disabled"><a title="下一页">&gt;&gt;</a></li>
                 <li class="disabled"><a title="尾页">尾页</a></li>
             </c:when>
@@ -87,8 +86,6 @@
                 <li><a href="#" onclick="$.table.turnPage('${pageSize}', ${page.totalPages}, this);" title="尾页">尾页</a></li>
             </c:otherwise>
         </c:choose>
-
-
     </ul>
     <div>
         <span class="page-input">

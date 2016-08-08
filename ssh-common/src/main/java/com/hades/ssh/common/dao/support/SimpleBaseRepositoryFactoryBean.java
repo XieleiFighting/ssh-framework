@@ -91,7 +91,7 @@ class SimpleBaseRepositoryFactory<T, ID extends Serializable> extends JpaReposit
         return BaseDao.class.isAssignableFrom(repositoryInterface);
     }
 
-    @Override
+	@Override
     protected QueryLookupStrategy getQueryLookupStrategy(QueryLookupStrategy.Key key, EvaluationContextProvider evaluationContextProvider) {
         return super.getQueryLookupStrategy(key, evaluationContextProvider);
     }

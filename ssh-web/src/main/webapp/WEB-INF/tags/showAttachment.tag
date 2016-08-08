@@ -1,4 +1,4 @@
-<%@ tag import="com.sishuok.es.common.utils.ImagesUtils" %>
+<%@ tag import="com.hades.ssh.common.utils.ImagesUtils" %>
 <%@ tag import="org.apache.commons.io.FilenameUtils" %>
 <%@ tag import="org.apache.commons.lang3.StringUtils" %>
 <%@ tag import="java.net.URLEncoder" %>

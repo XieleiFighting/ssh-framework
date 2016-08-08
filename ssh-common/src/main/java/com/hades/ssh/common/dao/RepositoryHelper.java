@@ -52,7 +52,7 @@ public class RepositoryHelper {
 
     public static EntityManager getEntityManager() {
         Assert.notNull(entityManager, "entityManager must null, please see " +
-                "[com.sishuok.es.common.repository.RepositoryHelper#setEntityManagerFactory]");
+                "[com.hades.ssh.common.dao.RepositoryHelper#setEntityManagerFactory]");
 
         return entityManager;
     }
@@ -69,7 +69,7 @@ public class RepositoryHelper {
 
     /**
      * <p>ql条件查询<br/>
-     * searchCallback默认实现请参考 {@see com.sishuok.es.common.repository.callback.DefaultSearchCallback}<br/>
+     * searchCallback默认实现请参考 {@see com.hades.ssh.common.dao.callback.DefaultSearchCallback}<br/>
      * <p/>
      * 测试用例请参考：{@see com.sishuok.es.common.repository.UserRepositoryImplForCustomSearchIT}
      * 和{@see com.sishuok.es.common.repository.UserRepositoryImplForDefaultSearchIT}

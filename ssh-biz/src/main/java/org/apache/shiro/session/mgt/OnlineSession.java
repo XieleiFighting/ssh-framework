@@ -27,8 +27,7 @@ public class OnlineSession extends SimpleSession {
     private static final int USER_AGENT_BIT_MASK = 1 << bitIndexCounter++;
     private static final int STATUS_BIT_MASK = 1 << bitIndexCounter++;
     private static final int USERNAME_BIT_MASK = 1 << bitIndexCounter++;
-    private static final int REMEMBER_ME_BIT_MASK = 1 << bitIndexCounter++;
-
+//    private static final int REMEMBER_ME_BIT_MASK = 1 << bitIndexCounter++;
 
     public static enum OnlineStatus {
         on_line("在线"), hidden("隐身"), force_logout("强制退出");
@@ -176,7 +175,6 @@ public class OnlineSession extends SimpleSession {
      * @throws ClassNotFoundException if a required class needed for instantiation is not available in the present JVM
      * @since 1.0
      */
-    @SuppressWarnings({"unchecked"})
     private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
         in.defaultReadObject();
         short bitMask = in.readShort();

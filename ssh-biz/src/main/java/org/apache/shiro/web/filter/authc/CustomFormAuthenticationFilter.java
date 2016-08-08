@@ -5,13 +5,14 @@
  */
 package org.apache.shiro.web.filter.authc;
 
-import com.sishuok.es.sys.user.entity.User;
-import com.sishuok.es.sys.user.service.UserService;
+import javax.servlet.ServletRequest;
+
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.servlet.ServletRequest;
+import com.hades.ssh.entity.sys.User;
+import com.hades.ssh.service.sys.UserService;
 
 /**
  * 基于几点修改：

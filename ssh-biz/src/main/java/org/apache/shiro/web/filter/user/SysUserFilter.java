@@ -5,19 +5,21 @@
  */
 package org.apache.shiro.web.filter.user;
 
-import com.sishuok.es.common.Constants;
-import com.sishuok.es.sys.user.entity.User;
-import com.sishuok.es.sys.user.entity.UserStatus;
-import com.sishuok.es.sys.user.service.UserService;
+import java.io.IOException;
+
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.AccessControlFilter;
 import org.apache.shiro.web.util.WebUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import java.io.IOException;
+import com.hades.ssh.common.Constants;
+import com.hades.ssh.entity.enums.UserStatus;
+import com.hades.ssh.entity.sys.User;
+import com.hades.ssh.service.sys.UserService;
 
 /**
  * 验证用户过滤器

@@ -1,5 +1,5 @@
 <%@ tag pageEncoding="UTF-8"%>
-<%@ attribute name="icon" type="com.sishuok.es.maintain.icon.entity.Icon" required="false" description="当前图标" %>
+<%@ attribute name="icon" type="com.hades.ssh.entity.maintain.Icon" required="false" description="当前图标" %>
 <%@ attribute name="iconIdentity" type="java.lang.String" required="false" description="当前图标" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="es" tagdir="/WEB-INF/tags" %>

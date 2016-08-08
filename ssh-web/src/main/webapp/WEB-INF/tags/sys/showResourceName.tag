@@ -1,7 +1,7 @@
 <%@ tag import="com.google.common.collect.Lists" %>
-<%@ tag import="com.sishuok.es.common.utils.SpringUtils" %>
-<%@ tag import="com.sishuok.es.sys.resource.entity.Resource" %>
-<%@ tag import="com.sishuok.es.sys.resource.service.ResourceService" %>
+<%@ tag import="com.hades.ssh.common.utils.SpringUtils" %>
+<%@ tag import="com.hades.ssh.entity.sys.Resource" %>
+<%@ tag import="com.hades.ssh.service.sys.ResourceService" %>
 <%@ tag import="java.util.List" %>
 <%@ tag pageEncoding="UTF-8"%>
 <%@ attribute name="id" type="java.lang.Long" required="true" description="当前要展示的资源的名字" %>

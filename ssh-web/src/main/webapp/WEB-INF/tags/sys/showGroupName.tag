@@ -1,6 +1,6 @@
-<%@ tag import="com.sishuok.es.common.utils.SpringUtils" %>
-<%@ tag import="com.sishuok.es.sys.group.entity.Group" %>
-<%@ tag import="com.sishuok.es.sys.group.service.GroupService" %>
+<%@ tag import="com.hades.ssh.common.utils.SpringUtils" %>
+<%@ tag import="com.hades.ssh.entity.sys.Group" %>
+<%@ tag import="com.hades.ssh.service.sys.GroupService" %>
 <%@ tag pageEncoding="UTF-8"%>
 <%@ attribute name="id" type="java.lang.Long" required="true" description="当前要展示的用户的id" %>
 <%!private GroupService groupService;%>

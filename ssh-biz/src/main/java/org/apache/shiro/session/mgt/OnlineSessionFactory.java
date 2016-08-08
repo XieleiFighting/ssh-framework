@@ -5,12 +5,13 @@
  */
 package org.apache.shiro.session.mgt;
 
-import com.sishuok.es.common.utils.IpUtils;
-import com.sishuok.es.sys.user.entity.UserOnline;
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.shiro.session.Session;
 import org.apache.shiro.web.session.mgt.WebSessionContext;
 
-import javax.servlet.http.HttpServletRequest;
+import com.hades.ssh.common.utils.IpUtils;
+import com.hades.ssh.entity.sys.UserOnline;
 
 /**
  * 创建自定义的session，
@@ -18,8 +19,8 @@ import javax.servlet.http.HttpServletRequest;
  * 如 用户登录到的系统ip
  * 用户状态（在线 隐身 强制退出）
  * 等 比如当前所在系统等
- * <p>User: Zhang Kaitao
- * <p>Date: 13-3-20 下午2:33
+ * <p>User: XieLei
+ * <p>Date: 2016年8月8日 上午10:39:04
  * <p>Version: 1.0
  */
 public class OnlineSessionFactory implements SessionFactory {

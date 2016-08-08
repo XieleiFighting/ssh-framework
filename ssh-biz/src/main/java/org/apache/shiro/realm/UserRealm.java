@@ -5,7 +5,14 @@
  */
 package org.apache.shiro.realm;
 
-import org.apache.shiro.authc.*;
+import org.apache.shiro.authc.AuthenticationException;
+import org.apache.shiro.authc.AuthenticationInfo;
+import org.apache.shiro.authc.AuthenticationToken;
+import org.apache.shiro.authc.ExcessiveAttemptsException;
+import org.apache.shiro.authc.LockedAccountException;
+import org.apache.shiro.authc.SimpleAuthenticationInfo;
+import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.subject.PrincipalCollection;
@@ -14,11 +21,19 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 
+import com.hades.ssh.common.dao.support.SimpleBaseRepositoryFactoryBean;
+import com.hades.ssh.entity.sys.User;
+import com.hades.ssh.exception.user.UserBlockedException;
+import com.hades.ssh.exception.user.UserException;
+import com.hades.ssh.exception.user.UserNotExistsException;
+import com.hades.ssh.exception.user.UserPasswordNotMatchException;
+import com.hades.ssh.exception.user.UserPasswordRetryLimitExceedException;
+import com.hades.ssh.service.sys.UserAuthService;
 import com.hades.ssh.service.sys.UserService;
 
 /**
- * <p>User: Zhang Kaitao
- * <p>Date: 13-3-12 下午9:05
+ * <p>User: XieLei
+ * <p>Date: 2016年8月8日 上午10:38:23
  * <p>Version: 1.0
  */
 public class UserRealm extends AuthorizingRealm {

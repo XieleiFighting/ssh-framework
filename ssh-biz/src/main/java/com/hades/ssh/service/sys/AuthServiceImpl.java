@@ -4,6 +4,7 @@ import java.util.Set;
 
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.hades.ssh.common.service.BaseServiceImpl;
 import com.hades.ssh.dao.sys.AuthDao;
@@ -11,6 +12,7 @@ import com.hades.ssh.entity.sys.Auth;
 import com.hades.ssh.entity.sys.Group;
 import com.hades.ssh.entity.sys.User;
 
+@Service
 public class AuthServiceImpl extends BaseServiceImpl<Auth, Long> implements AuthService {
 
 	@Autowired

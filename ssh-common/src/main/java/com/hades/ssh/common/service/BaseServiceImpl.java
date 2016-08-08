@@ -13,7 +13,7 @@ import com.hades.ssh.common.dao.BaseDao;
 import com.hades.ssh.common.entity.AbstractEntity;
 import com.hades.ssh.common.entity.search.Searchable;
 
-public class BaseServiceImpl<T extends AbstractEntity<ID>, ID extends Serializable> implements BaseService<T, ID> {
+public abstract class BaseServiceImpl<T extends AbstractEntity<ID>, ID extends Serializable> implements BaseService<T, ID> {
 
 	@Autowired
 	protected BaseDao<T, ID> baseDao;

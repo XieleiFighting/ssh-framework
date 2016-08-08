@@ -48,13 +48,16 @@
 		
 		<!-- 自定义的参数解析器，在此注册！！！ -->
 		<mvc:argument-resolvers>
-			
+			<bean class="com.hades.ssh.common.web.bind.method.PageableMethodArgumentResolver"/>
+            <bean class="com.hades.ssh.common.web.bind.method.SearchableMethodArgumentResolver"/>
+            <bean class="com.hades.ssh.common.web.bind.method.FormModelMethodArgumentResolver"/>
+			<bean class="com.hades.ssh.common.web.bind.method.CurrentUserMethodArgumentResolver" />
 		</mvc:argument-resolvers>
 	</mvc:annotation-driven>
 	
 	<mvc:view-controller path="/" view-name="redirect:/admin/index"/>
     <!-- 当在web.xml 中   DispatcherServlet使用 <url-pattern>/</url-pattern> 映射时，能映射静态资源 -->
-    <mvc:default-servlet-handler/>
+    <mvc:default-servlet-handler />
     
     <!-- 静态资源映射 -->
     <mvc:resources mapping="/static/**" location="/WEB-INF/static/"/>
@@ -63,6 +66,13 @@
     <mvc:interceptors>
     	<bean class="org.springframework.web.servlet.handler.ConversionServiceExposingInterceptor">
             <constructor-arg ref="conversionService"/>
+        </bean>
+        <bean class="com.hades.ssh.common.web.interceptor.SetCommonDataInterceptor">
+            <property name="excludeUrlPatterns">
+                <value>
+                    /admin/polling
+                </value>
+            </property>
         </bean>
     </mvc:interceptors>
     

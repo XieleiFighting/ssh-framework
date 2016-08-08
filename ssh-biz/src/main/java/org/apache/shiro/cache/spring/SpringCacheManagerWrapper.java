@@ -15,8 +15,8 @@ import java.util.Set;
 
 /**
  * 包装Spring cache抽象
- * <p>User: Zhang Kaitao
- * <p>Date: 13-3-23 上午8:26
+ * <p>User: XieLei
+ * <p>Date: 2016年8月8日 上午10:59:16
  * <p>Version: 1.0
  */
 public class SpringCacheManagerWrapper implements CacheManager {
@@ -32,13 +32,15 @@ public class SpringCacheManagerWrapper implements CacheManager {
         this.cacheManager = cacheManager;
     }
 
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public <K, V> Cache<K, V> getCache(String name) throws CacheException {
         org.springframework.cache.Cache springCache = cacheManager.getCache(name);
         return new SpringCacheWrapper(springCache);
     }
 
-    static class SpringCacheWrapper implements Cache {
+    @SuppressWarnings("rawtypes")
+	static class SpringCacheWrapper implements Cache {
         private org.springframework.cache.Cache springCache;
 
         SpringCacheWrapper(org.springframework.cache.Cache springCache) {
