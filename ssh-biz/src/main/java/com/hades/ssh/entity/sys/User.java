@@ -17,6 +17,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.hades.ssh.common.dao.support.annotation.EnableQueryCache;
@@ -155,6 +156,7 @@ public class User extends BaseEntity<Long> implements LogicDeleteable {
         this.username = username;
     }
 
+	@JSONField(serialize = false)
     public String getPassword() {
         return password;
     }
@@ -163,6 +165,7 @@ public class User extends BaseEntity<Long> implements LogicDeleteable {
         this.password = password;
     }
 
+    @JSONField(serialize = false)
     public String getSalt() {
         return salt;
     }
