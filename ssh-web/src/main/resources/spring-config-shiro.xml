@@ -59,7 +59,7 @@
         <property name="sessionValidationInterval" value="${shiro.session.validation.interval}"/>
         <property name="sessionManager" ref="sessionManager"/>
         <!-- see spring-config-task.xml-->
-        <!-- <property name="scheduler" ref="scheduler"/> -->
+        <property name="scheduler" ref="scheduler"/>
     </bean>
     
     <!-- 会话管理器 -->
@@ -68,7 +68,6 @@
         <property name="sessionFactory" ref="onlineSessionFactory"/>
         <property name="sessionDAO" ref="onlineSessionDAO"/>
         <property name="deleteInvalidSessions" value="false"/>
-
 
         <property name="sessionValidationInterval" value="${shiro.session.globalSessionTimeout}"/>
         <property name="sessionValidationSchedulerEnabled" value="true"/>

@@ -1,5 +1,6 @@
 package com.hades.ssh.service.maintain;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.hades.ssh.common.service.BaseServiceImpl;
@@ -9,6 +10,7 @@ import com.hades.ssh.entity.maintain.NotificationTemplate;
 @Service
 public class NotificationTemplateServiceImpl extends BaseServiceImpl<NotificationTemplate, Long> implements NotificationTemplateService {
 
+	@Autowired
 	private NotificationTemplateDao notificationTemplateDao;
 	
 	@Override

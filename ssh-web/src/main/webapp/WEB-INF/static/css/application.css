@@ -304,8 +304,9 @@ html, body {
 }
 
 .index-header {
-    background:#1999d7;
-    background: url(../images/bg-header.png) no-repeat;
+    /* background:#1999d7; */
+    /* background: url(../images/bg-header.png) no-repeat; */
+    background:#FFFFFF;/* 背景色改为白色，如果有背景图，则使用背景图，方便切换header */
 }
 
 

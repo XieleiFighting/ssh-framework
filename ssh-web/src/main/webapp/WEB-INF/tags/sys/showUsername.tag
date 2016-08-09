@@ -6,7 +6,6 @@
 <%@ attribute name="needLink" type="java.lang.Boolean" required="false" description="是否需要链接" %>
 <%!private UserService userService;%>
 <%
-
     if(userService == null) {
         userService = SpringUtils.getBean(UserService.class);
     }
